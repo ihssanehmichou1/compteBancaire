@@ -11,14 +11,14 @@ import Exceptions.SoldeInsuffisantException;
 public abstract class Compte implements iCompte {
     private int code;
     protected double solde;
-    protected String statut;
+    protected String Statut;
     protected double montant;
     private List<Operation> operations;
 
     public Compte(int code, double solde, String statut) {
         this.code = code;
         this.solde = solde;
-        this.statut = statut;
+        this.Statut = statut;
         this.operations = new ArrayList<>();
     }
 
@@ -42,7 +42,7 @@ public abstract class Compte implements iCompte {
 //            operations.add(new Operation(new Date(), montant));
             return true;
         } else {
-            throw new SoldeInsuffisantException("Solde insuffisant pour le retrait.");
+            throw new SoldeInsuffisantException("Solde insuffisant pour le Retrait.java.");
         }
     }
 
@@ -87,7 +87,7 @@ public abstract class Compte implements iCompte {
     public void operationFile(){
         try(BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\ihssa\\AndroidStudioProjects\\compteBancaire\\app\\src\\main\\java\\compte\\compte1.txt",true))){
             for (Operation operat : operations){
-                String OperationType = operat instanceof Retrait ? "retrait": "versement";
+                String OperationType = operat instanceof Retrait ? "Retrait.java": "versement";
                 String message = "operation de" + OperationType + "" +operat.getDateOperation() + "" + operat.getMontant()+ "compte" +this.getClass().getSimpleName();
                 writer.write(message);
                 writer.newLine();

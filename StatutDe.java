@@ -1,6 +1,6 @@
 package compte;
 
-enum StatutDeCompte {
+enum StatutDe{
     CREATED, SUSPENDED, DELETED, BLOCKED
 }
 

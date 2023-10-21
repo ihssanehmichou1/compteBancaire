@@ -15,7 +15,7 @@ public abstract class CompteCourant extends Compte {
             // Operations.add(new Retrait(montant));
             return true;
         } else {
-            throw new SoldeInsuffisantException("Solde insuffisant pour le retrait.");
+            throw new SoldeInsuffisantException("Solde insuffisant pour le Retrait.java.");
         }
     }
 
